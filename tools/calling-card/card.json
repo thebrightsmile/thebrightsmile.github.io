@@ -1,0 +1,43 @@
+{
+  "siteUrl": "https://rashleysmiledentalclinic.github.io/",
+  "siteLabel": "rashleysmiledentalclinic.github.io",
+  "logoImage": "src/assets/logo.svg",
+  "doctor": {
+    "name": "Rashley Jade B. Oguis",
+    "designation": "DMD",
+    "role": "Doctor of Dental Medicine · General Dentist"
+  },
+  "clinic": {
+    "name": "Rashley Smile Dental Clinic",
+    "shortName": "Rashley Smile",
+    "shortNameLines": [
+      "Rashley Smile",
+      "Dental Clinic"
+    ],
+    "subtitle": "Care with confidence",
+    "address": "Cagayan de Oro",
+    "established": "Est. 2020",
+    "tagline": "Your smile,",
+    "taglineAccent": "our priority."
+  },
+  "contact": {
+    "phone": "0904 6284 7922",
+    "email": "rashleysmile@clinic.com"
+  },
+  "colors": {
+    "brownDark": "#4a1630",
+    "brown": "#6a1f45",
+    "brownMid": "#8a2a5c",
+    "brownLight": "#a9477a",
+    "pink": "#f2a9c6",
+    "pinkDeep": "#d2608f",
+    "pinkPale": "#fde3ec",
+    "cream": "#fffafc"
+  },
+  "logoBadge": true,
+  "fonts": {
+    "display": "@fontsource-variable/outfit/files/outfit-latin-wght-normal.woff2",
+    "displayItalic": "@fontsource-variable/nunito/files/nunito-latin-wght-italic.woff2",
+    "body": "@fontsource-variable/nunito/files/nunito-latin-wght-normal.woff2"
+  }
+}
