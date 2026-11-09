@@ -1,8 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import '@fontsource-variable/nunito'
-import '@fontsource-variable/nunito/wght-italic.css'
-import '@fontsource-variable/outfit'
+import '@fontsource-variable/manrope'
+import '@fontsource-variable/playfair-display'
+import '@fontsource-variable/playfair-display/wght-italic.css'
+import '@fontsource-variable/dancing-script'
 import './styles/global.css'
 import App from './App'
 

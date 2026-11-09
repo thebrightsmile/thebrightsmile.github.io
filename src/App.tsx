@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
-import { VisitSteps } from './components/VisitSteps'
 import { About } from './components/About'
 import { Services } from './components/Services'
 import { Appointment, type BookingRequest } from './components/Appointment'
@@ -41,15 +40,15 @@ export default function App() {
 
   return (
     <>
+      <div className="marble" aria-hidden="true" />
       <a className="skip-link" href="#main">
         Skip to content
       </a>
       <Navbar />
       <main id="main">
         <Hero />
-        <VisitSteps />
-        <Services onBook={handleBook} />
         <About />
+        <Services onBook={handleBook} />
         <Appointment request={request} />
       </main>
       <Footer />

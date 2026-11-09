@@ -136,8 +136,14 @@ export function Appointment({ request }: AppointmentProps) {
     setStep(2)
   }, [request])
 
-  // Move focus to the panel heading whenever the step changes.
+  // Move focus to the panel heading whenever the step changes (not on first render,
+  // which would draw a focus ring before the visitor has interacted).
+  const firstRender = useRef(true)
   useEffect(() => {
+    if (firstRender.current) {
+      firstRender.current = false
+      return
+    }
     titleRef.current?.focus({ preventScroll: true })
   }, [step])
 
@@ -317,9 +323,9 @@ export function Appointment({ request }: AppointmentProps) {
       <div className="container">
         <Reveal>
           <div className="section__head">
-            <span className="eyebrow">Book an appointment</span>
+            <span className="eyebrow">Reserve a visit</span>
             <h2 id="appointment-title" className="h2">
-              Book with <span className="italic-accent">confidence</span>
+              Reserve your <span className="italic-accent">brightest</span> visit
             </h2>
             <p className="lede">
               Choose a treatment, pick an open slot and leave your details. We confirm by text or
@@ -399,7 +405,7 @@ export function Appointment({ request }: AppointmentProps) {
                     <span />
                     <button
                       type="button"
-                      className="btn btn--primary"
+                      className="btn btn--gold"
                       disabled={!service}
                       onClick={() => setStep(2)}
                     >
@@ -523,7 +529,7 @@ export function Appointment({ request }: AppointmentProps) {
                     </button>
                     <button
                       type="button"
-                      className="btn btn--primary"
+                      className="btn btn--gold"
                       disabled={!date || slotStart === null}
                       onClick={() => setStep(3)}
                     >
@@ -688,8 +694,8 @@ export function Appointment({ request }: AppointmentProps) {
                     <button type="button" className="btn btn--ghost" onClick={() => setStep(2)}>
                       Back
                     </button>
-                    <button type="submit" className="btn btn--primary">
-                      Confirm booking
+                    <button type="submit" className="btn btn--gold">
+                      Confirm reservation
                       <CheckIcon className="btn__icon" />
                     </button>
                   </div>
@@ -743,7 +749,7 @@ export function Appointment({ request }: AppointmentProps) {
                   ) : null}
 
                   <div className="panel__actions" style={{ justifyContent: 'center' }}>
-                    <button type="button" className="btn btn--primary" onClick={resetFlow}>
+                    <button type="button" className="btn btn--gold" onClick={resetFlow}>
                       Book another appointment
                     </button>
                   </div>
@@ -817,7 +823,7 @@ export function Appointment({ request }: AppointmentProps) {
         <Reveal>
           <div className="mine">
             <div className="mine__head">
-              <h3 className="h3">Your upcoming appointments</h3>
+              <h3 className="h3">Your upcoming visits</h3>
             </div>
             {upcoming.length === 0 ? (
               <div className="slots__empty">No upcoming appointments yet. Your bookings will appear here.</div>

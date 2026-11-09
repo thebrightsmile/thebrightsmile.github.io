@@ -5,9 +5,9 @@ import { scrollToSection } from '../lib/scroll'
 
 export const SECTIONS = [
   { id: 'home', label: 'Home' },
-  { id: 'services', label: 'Services' },
   { id: 'about', label: 'About' },
-  { id: 'appointment', label: 'Book' },
+  { id: 'services', label: 'Treatments' },
+  { id: 'appointment', label: 'Reserve' },
 ] as const
 
 export type SectionId = (typeof SECTIONS)[number]['id']
@@ -138,8 +138,8 @@ export function Navbar() {
         </nav>
 
         <div className="nav__actions">
-          <button type="button" className="btn btn--primary btn--sm nav__cta" onClick={() => go('appointment')}>
-            Book now
+          <button type="button" className="btn btn--gold btn--sm nav__cta" onClick={() => go('appointment')}>
+            Reserve a visit
           </button>
           <button
             type="button"
@@ -170,8 +170,8 @@ export function Navbar() {
               {s.label}
             </a>
           ))}
-          <button type="button" className="btn btn--primary btn--block" onClick={() => go('appointment')}>
-            Book an appointment
+          <button type="button" className="btn btn--gold btn--block" onClick={() => go('appointment')}>
+            Reserve a visit
           </button>
         </nav>
       ) : null}

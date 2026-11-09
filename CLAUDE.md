@@ -1,7 +1,7 @@
 # Project guide for Claude
 
 Dental clinic "digital calling card" website + printable calling card.
-Live example: https://rashleysmiledentalclinic.github.io/ (repo `rashleysmiledentalclinic/rashleysmiledentalclinic.github.io`).
+Live example: https://thebrightsmile.github.io/ (repo `thebrightsmile/thebrightsmile.github.io`).
 The same codebase is the **template for every new clinic site**. For a new clinic,
 follow `docs/NEW-CLINIC-PLAYBOOK.md` step by step.
 
@@ -24,9 +24,9 @@ npm run card:bleed   # same with 0.125 in bleed for commercial printing
 | --- | --- |
 | Clinic name, doctor, contact, address, time zone, founding date, hours, services & peso prices | `src/data/clinic.ts` |
 | Colour scheme (CSS tokens) | `src/styles/global.css` (`:root` block at the top) |
-| Logo (outlined tooth + plus, SVG) | `src/assets/logo.svg` and `public/favicon.svg` (keep them in sync); rendered by `src/components/Logo.tsx` |
+| Logo (client's tooth-and-ring emblem, PNG) | `src/assets/logo-192.png`, `src/assets/logo-512.png`, `public/favicon.png`, `public/apple-touch-icon.png`; rendered by `src/components/Logo.tsx` |
 | Doctor portrait | none supplied; `src/components/About.tsx` shows a monogram badge. To add one, drop `src/assets/doctor-portrait.jpg` (640 × 800) and swap the badge for an `<img>` |
-| Hero stats, marquee items | `src/components/Hero.tsx` |
+| Hero stats | `src/components/Hero.tsx` |
 | About copy, values | `src/components/About.tsx` |
 | Calling-card text, URL, colours, fonts, logo image/badge | `tools/calling-card/card.json` (must match `clinic.ts`; `fonts` are node_modules paths of the site's fonts) |
 | Page `<title>`, meta description | `index.html` |
